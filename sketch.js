@@ -36,6 +36,7 @@ function setup() {
  // Draw all the circles
  for (var i = 0; i < circles.length; i++) { 
      fill(circles[i].rr,circles[i].g,circles[i].b);
-     noStroke();
-     ellipse(circles[i].x, circles[i].y, circles[i].r * 2, circles[i].r * 2); } 
+     strokeWeight(3);
+     stroke(circles[i].b,circles[i].g,circles[i].rr);
+     ellipse(circles[i].x, circles[i].y, (circles[i].r * 2)-3,(circles[i].r * 2)-3); } 
 }
