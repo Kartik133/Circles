@@ -9,7 +9,10 @@ function setup() {
  // Pick a random circle 
  var circle = { x: random(width), 
                y: random(height), 
-               r: random(6, 36) 
+               r: random(6, 36),
+               rr: random(255),
+               g: random(255),
+               b: random(255) 
               }; 
  // Does it overlap any previous circles?
  var overlapping = false;
@@ -32,7 +35,7 @@ function setup() {
 }
  // Draw all the circles
  for (var i = 0; i < circles.length; i++) { 
-     fill(255, 0, 175, 100);
+     fill(circles[i].rr,circles[i].g,circles[i].b);
      noStroke();
      ellipse(circles[i].x, circles[i].y, circles[i].r * 2, circles[i].r * 2); } 
 }
